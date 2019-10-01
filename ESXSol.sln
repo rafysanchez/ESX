@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESXSol", "ESXSol\ESXSol.csproj", "{4E2E7A10-B072-4811-8DA0-1C7AA40547DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E2E7A10-B072-4811-8DA0-1C7AA40547DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2E7A10-B072-4811-8DA0-1C7AA40547DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2E7A10-B072-4811-8DA0-1C7AA40547DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2E7A10-B072-4811-8DA0-1C7AA40547DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F95FC2BD-030A-4E05-9900-05A7C2DD868D}
+	EndGlobalSection
+EndGlobal
