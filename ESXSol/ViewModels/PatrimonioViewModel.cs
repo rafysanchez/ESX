@@ -14,6 +14,6 @@ namespace ESXSol.ViewModels
         public string Descricao { get; set; }
         public Guid No_Tombo { get; set; }
 
-        public IEnumerable<Marca> Marcas { get; set; }
+        public virtual Marca Marcas { get; set; }
     }
 }

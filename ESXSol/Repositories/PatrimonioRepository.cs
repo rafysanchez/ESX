@@ -20,9 +20,11 @@ namespace ESXSol.Repositories
 
         public List<PatrimonioViewModel> Get()
         {
-            return _context
-                .Patrimonio
-                .Include(x => x.Marcas)
+            var linhas = (from tsk in _context.Patrimonio.Include(t => t.Marcas)
+                        select tsk).ToList();
+
+ 
+           var l = linhas
                 .Select(x => new PatrimonioViewModel
                 {
                     Id = x.Id,
@@ -30,9 +32,10 @@ namespace ESXSol.Repositories
                     MarcaId = x.MarcaId,
                     No_Tombo = x.No_Tombo,
                     Marcas = x.Marcas
+                  
                 })
-                .AsNoTracking()
                 .ToList();
+            return l;
         }
 
         public PatrimonioViewModel GetById(int Id)
@@ -47,6 +50,7 @@ namespace ESXSol.Repositories
                                MarcaId = x.MarcaId,
                                No_Tombo = x.No_Tombo,
                                Marcas = x.Marcas
+
                            })
                            .Where(x => x.Id == Id)
                            .SingleOrDefault();
@@ -72,7 +76,7 @@ namespace ESXSol.Repositories
         {
             try
             {
-                _context.Remove(_context.Patrimonio.Where(x=>x.Id== Id).First());
+                _context.Remove(_context.Patrimonio.Where(x => x.Id == Id).First());
                 _context.SaveChanges();
 
                 return true;

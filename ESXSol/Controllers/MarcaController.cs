@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace ESXSol.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class MarcaController : ControllerBase
     {
         private readonly MarcaRepository _repository;
